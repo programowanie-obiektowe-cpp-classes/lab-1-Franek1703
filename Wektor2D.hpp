@@ -22,7 +22,7 @@ public:
     void setY(double newY) { y = newY; }
 
     Wektor2D operator+(Wektor2D other) const { return Wektor2D(x + other.x, y + other.y); }
-    Wektor2D operator*(Wektor2D other) const { return Wektor2D(x * other.x, y * other.y); }
+    double operator*(Wektor2D other) const { return x*other.x + y*other.y; }
     double   norm() { return sqrt(x * x + y * y); }
 
     void print();
